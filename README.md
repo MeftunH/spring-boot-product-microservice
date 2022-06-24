@@ -18,4 +18,4 @@ POST api/v1/products    //Save product
 DELETE api/v1/products/{id}    //Delete product
 ```
 ### Dependencies
-```gradle,lombok,spring security,PostgreSQL,Basic Auth```
+```gradle,lombok,spring security,PostgreSQL,Basic Auth,PostgreSQL,SpringBoot```
