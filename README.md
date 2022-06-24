@@ -3,10 +3,10 @@
 This is a spring boot product microservice.
 ### Endpoints
 ```aidl
-GET /products/{id}
-GET /products
-POST /products
-DELETE /products/{id}
+GET api/v1/products/{id}
+GET api/v1/products
+POST api/v1/products
+DELETE api/v1/products/{id}
 ```
 ### Dependencies
 ```gradle,lombok,spring security,PostgreSQL,Basic Auth```
