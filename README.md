@@ -3,6 +3,11 @@
 ```
 https://spring-product-microservice.herokuapp.com/
 ```
+### Basic Auth credentials
+``` 
+username: user
+password: 12345 
+ ```
 ### About
 This is a spring boot product microservice.
 ### Endpoints
@@ -14,9 +19,3 @@ DELETE api/v1/products/{id}    //Delete product
 ```
 ### Dependencies
 ```gradle,lombok,spring security,PostgreSQL,Basic Auth```
-
-### Basic Auth credentials
-``` 
-username: user
-password: 12345 
- ```
