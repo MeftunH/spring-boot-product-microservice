@@ -7,10 +7,10 @@ https://spring-product-microservice.herokuapp.com/
 This is a spring boot product microservice.
 ### Endpoints
 ```aidl
-GET api/v1/products/{id}
-GET api/v1/products
-POST api/v1/products
-DELETE api/v1/products/{id}
+GET api/v1/products/{id}    //Get product by id
+GET api/v1/products    //Get all products
+POST api/v1/products    //Save product
+DELETE api/v1/products/{id}    //Delete product
 ```
 ### Dependencies
 ```gradle,lombok,spring security,PostgreSQL,Basic Auth```
