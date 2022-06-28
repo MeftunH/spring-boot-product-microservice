@@ -5,8 +5,8 @@ https://spring-product-microservice.herokuapp.com/
 ```
 ### Basic Auth credentials
 ``` 
-username: user
-password: 12345 
+username: SecureKeyUsername!
+password: SecureKeyPassword! 
  ```
 ### About
 This is a spring boot product microservice.
