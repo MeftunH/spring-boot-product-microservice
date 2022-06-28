@@ -10,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+
     @Value("${service.security.secure-key-username}")
     private String SECURE_KEY_USERNAME;
 
@@ -18,9 +20,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
         auth.inMemoryAuthentication()
+                .passwordEncoder(passwordEncoder)
                 .withUser(SECURE_KEY_USERNAME)
-                .password("{noop}12345")
+                .password(passwordEncoder.encode(SECURE_KEY_PASSWORD))
                 .roles("USER");
     }
 
