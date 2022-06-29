@@ -24,8 +24,13 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
-        productService.deleteProduct(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        if (productService.existsById(id)) {
+            productService.deleteProduct(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return ResponseEntity.badRequest().body("Product with id " + id + " does not exist");
+        }
+
     }
 
     @GetMapping

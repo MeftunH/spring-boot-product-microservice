@@ -8,5 +8,7 @@ public interface IProductService{
      Product saveProduct(Product product);
      void deleteProduct(Long id);
 
+    boolean existsById(Long id);
+
     List<Product> findAll();
 }

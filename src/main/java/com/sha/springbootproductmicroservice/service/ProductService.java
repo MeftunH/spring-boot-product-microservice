@@ -24,7 +24,16 @@ public class ProductService  implements IProductService {
 
     @Override
     public void deleteProduct(Long id) {
-        productRepository.deleteById(id);
+        if (productRepository.existsById(id)) {
+            productRepository.deleteById(id);
+        } else {
+            throw new IllegalArgumentException("Product with id " + id + " does not exist");
+        }
+    }
+
+    @Override
+    public boolean existsById(Long id) {
+        return productRepository.existsById(id);
     }
 
     @Override
